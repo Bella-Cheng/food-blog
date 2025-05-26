@@ -11,7 +11,7 @@
         </ul>
         <ul class="flex">
           <li><a class="text-[#E6BC91] text-lg px-4" href="#">首頁</a></li>
-          <li><a class="text-[#E6BC91] text-lg px-4" href="#">關於我們</a></li>
+          <li><a class="text-[#E6BC91] text-lg px-4" href="#">關於貝拉</a></li>
           <li><a class="text-[#E6BC91] text-lg px-4 after:content-['｜'] after:pl-[20px]" href="#">精選推薦</a></li>
           <li class="pr-4"><a class="text-[#E6BC91] text-lg " href="#"><i class="fa-solid fa-user px-3"></i>會員</a></li>
           <li><a class="text-[#E6BC91] text-lg " href="#"><i class="fa-solid fa-bag-shopping px-3 "></i>購物車</a></li>
@@ -37,7 +37,7 @@
       <!-- Section #3 -->
       <section class="bg-[#d6d1d163]">
         <div class="max-w-4xl mx-auto py-24  ">
-          <h2 class="text-5xl py-8 my-6 text-center">聯絡我們</h2>
+          <h2 class="text-5xl py-8 my-6 text-center">聯絡貝拉</h2>
           <form class="grid grid-cols-4 gap-6 items-center">
 
             <!-- 姓名 -->
