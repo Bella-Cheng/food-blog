@@ -1,14 +1,17 @@
 <script setup>
 import HomePage from './components/HomePage.vue'
 import About from './components/About.vue'
-import Member from './components/Member.vue'
+import Login from './components/Login.vue';
+import Sign from './components/Sign.vue';
+
 
 </script>
 
 <template>
   <!-- <HomePage /> -->
   <!-- <About /> -->
-  <Member />
+  <Login />
+  <Sign />
 
 
 </template>
