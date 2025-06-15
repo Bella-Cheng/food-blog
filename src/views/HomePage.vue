@@ -4,21 +4,6 @@
 
 <template>
   <body class="max-w-screen">
-    <header class="bg-[#222222] w-full">
-      <nav class="flex justify-between max-w-6xl mx-auto py-4">
-        <ul>
-          <li><a class="text-[#E6BC91] text-2xl font-bold" href="#" >貝拉❤️美食</a></li>
-        </ul>
-        <ul class="flex">
-          <li><a class="text-[#E6BC91] text-lg px-4" href="#">首頁</a></li>
-          <li><a class="text-[#E6BC91] text-lg px-4" href="#">關於貝拉</a></li>
-          <li><a class="text-[#E6BC91] text-lg px-4 after:content-['｜'] after:pl-[20px]" href="#">精選推薦</a></li>
-          <li class="pr-4"><a class="text-[#E6BC91] text-lg " href="#"><i class="fa-solid fa-user px-3"></i>會員</a></li>
-          <li><a class="text-[#E6BC91] text-lg " href="#"><i class="fa-solid fa-bag-shopping px-3 "></i>購物車</a></li>
-
-        </ul>
-      </nav>
-    </header>
     <main>
       <!-- Section #1 -->
       <section  class="bg-[url(./picture/bgc-bakery.jpg)] bg-cover p-46">
@@ -85,13 +70,7 @@
       </section>
     </main>
 
-    <footer class="bg-[#222222] py-16">
-      <div class="text-center max-w-6xl mx-auto">
-        <p class="text-lg font-bold text-stone-50 py-4"> 貝拉❤️美食  版權所有 © 2025 </p>
-        <span class="font-bold text-stone-50">聯絡信箱：</span><a  class="text-stone-50" href="mailto:dhp951320@gmail.com">dhp951320@gmail.com</a>
-        <p class="py-4 text-stone-400">Copyright © BellaCheng All Rights Reserved.</p>
-      </div>
-    </footer>
+    
   </body>
 </template>
 
