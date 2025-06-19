@@ -1,6 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useCartStore } from '../stores/cartStore'
+import Swal from 'sweetalert2'
 
 const cartStore = useCartStore()
 
@@ -27,6 +28,52 @@ const totalItem = computed(() => {
 const totalPrice = computed(() => {
   return cartStore.cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
 })
+
+function checkout() {
+  if (cartStore.cart.length === 0) {
+    Swal.fire({
+      title: '購物車目前是空的',
+      confirmButtonText: '確認',
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      },
+      confirmButtonColor: '#000000',
+    })
+    return
+  }
+
+  Swal.fire({
+    title: '感謝購買！我們會儘快處理訂單',
+    confirmButtonText: '確認',
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__fadeOutDown
+        animate__faster
+      `
+    }
+  })
+
+  cartStore.clearCart()
+}
 
 </script>
 
@@ -68,7 +115,7 @@ const totalPrice = computed(() => {
         <div class="col-span-2 text-center font-semibold text-red-500">NT${{ item.price * item.quantity }}</div>
 
         <div class="col-span-1 text-center text-sm">
-          <button class="text-red-500 hover:underline">刪除</button>
+          <button @click="cartStore.removeShopCart(item.id)" class="text-red-500 hover:underline">刪除</button>
         </div>
       </div>
     </div>
@@ -82,7 +129,7 @@ const totalPrice = computed(() => {
       <div class="text-base text-gray-700">
         總金額：<span class="text-red-600 text-xl font-bold">NT${{ totalPrice }}</span>
       </div>
-      <button class="btn bg-black text-white hover:bg-amber-600 border-none px-6 py-2 rounded">
+      <button @click="checkout()" class="btn bg-black text-white hover:bg-amber-600 border-none px-6 py-2 rounded">
         去買單
       </button>
     </div>

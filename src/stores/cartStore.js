@@ -13,7 +13,7 @@ export const useCartStore = defineStore('cart', () =>{
     }
   }
 
-  function removeShopCart(productId){
+  function removeShopCart(productId) {
     cart.value = cart.value.filter(item => item.id !== productId)
   }
 
