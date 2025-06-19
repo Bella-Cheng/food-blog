@@ -1,6 +1,38 @@
+<script setup>
+import { ref, computed } from 'vue'
+import { useCartStore } from '../stores/cartStore'
+
+const cartStore = useCartStore()
+
+function addItem(item) {
+  item.quantity++
+}
+
+function reduceItem(item) {
+  if (item.quantity > 1) {
+    item.quantity--
+  }
+}
+
+const showTag = computed(() => cartStore.cart.length > 0)
+
+function getImageUrl(fileName) {
+  return new URL(`../assets/products/${fileName}`, import.meta.url).href
+}
+
+const totalItem = computed(() => {
+  return cartStore.cart.reduce((acc, item) => acc + item.quantity, 0)
+})
+
+const totalPrice = computed(() => {
+  return cartStore.cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+})
+
+</script>
+
 <template>
   <div class="max-w-6xl mx-auto px-4 py-6 bg-white rounded shadow mt-10">
-    <!-- 購物車表頭 -->
+   
     <div class="grid grid-cols-12 py-2 text-gray-500 text-sm border-b font-medium">
       <div class="col-span-5">商品</div>
       <div class="col-span-2 text-center">單價</div>
@@ -10,7 +42,7 @@
     </div>
 
     <div class="py-4 border-b">
-      <div class="items-center mb-4">
+      <div v-if="showTag" class="items-center mb-4">
         <span class="bg-red-600 text-white text-xs px-1 rounded">精選伴手禮</span>
       </div>
 
