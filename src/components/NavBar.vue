@@ -1,12 +1,12 @@
 <script setup>
-import { computed } from 'vue'
+import { useAuthStore } from '../stores/authStore'
+import { useCartStore } from '../stores/cartStore'
 import { useRouter } from 'vue-router'
 import Swal from 'sweetalert2'
-import { useCartStore } from '../stores/cartStore'
 
-const router = useRouter()
+const authStore = useAuthStore()
 const cartStore = useCartStore()
-const isLoggedIn = computed(() => !!localStorage.getItem('token'))
+const router = useRouter()
 
 const logout = () => {
   Swal.fire({
@@ -19,8 +19,8 @@ const logout = () => {
     cancelButtonColor: '#999999',
   }).then((result) => {
     if (result.isConfirmed) {
-      localStorage.removeItem('token')
-      localStorage.removeItem('user')
+      authStore.logout()
+
       Swal.fire({
         title: '已登出',
         icon: 'success',
@@ -62,7 +62,7 @@ const logout = () => {
         </li>
 
         <li class="pr-4">
-          <template v-if="isLoggedIn">
+          <template v-if="authStore.token">
             <button @click="logout" class="text-[#E6BC91] text-lg cursor-pointer">
               <i class="fa-solid fa-arrow-right-from-bracket px-3"></i>
               登出

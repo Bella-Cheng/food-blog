@@ -2,7 +2,9 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Swal from 'sweetalert2'
+import { useAuthStore } from '../stores/authStore'
 
+const authStore = useAuthStore()
 const router = useRouter()
 const username = ref('')
 const password = ref('')
@@ -30,9 +32,9 @@ const handleLogin = () => {
   if (
     username.value === savedUser.username &&
     password.value === savedUser.password
+    
   ) {
-    localStorage.setItem('token', 'FAKE_LOGIN_TOKEN_123')
-    localStorage.setItem('user', JSON.stringify(savedUser))
+    authStore.login('FAKE_LOGIN_TOKEN_123', savedUser)
 
     Swal.fire({
       title: '登入成功',
