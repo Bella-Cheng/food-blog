@@ -8,6 +8,7 @@ const authStore = useAuthStore()
 const router = useRouter()
 const username = ref('')
 const password = ref('')
+const showPassword = ref(false)
 
 const handleLogin = () => {
   const savedUser = JSON.parse(localStorage.getItem('mockUser'))
@@ -73,11 +74,11 @@ const handleLogin = () => {
           <div class="mb-6">
             <div class="flex justify-between text-center">
               <p class="text-left mb-2 font-semibold">密碼 PASSWORD</p>
-              <button class="cursor-pointer text-button mt-2 text-xs hover:text-sky-600">
+              <button @click="showPassword = !showPassword" class="cursor-pointer text-button mt-2 text-xs hover:text-sky-600">
                 顯示密碼
               </button>
             </div>
-            <input v-model="password" :type="isPasswordVisible ? 'text' : 'password'" class="input input-bordered w-full" />
+            <input v-model="password" :type="showPassword ? 'text' : 'password'" class="input input-bordered w-full" />
           </div>
 
           <button

@@ -35,7 +35,7 @@ const logout = () => {
 </script>
 
 <template>
-  <header class="bg-[#222222] w-full">
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#222222]/90 backdrop-blur-sm shadow-md">
     <nav class="flex justify-between max-w-6xl mx-auto py-4">
       <ul>
         <li>
