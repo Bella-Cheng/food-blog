@@ -10,7 +10,7 @@
           <li><router-link class="text-[#E6BC91] text-lg px-4" to="/about">關於貝拉</router-link></li>
           <li><router-link class="text-[#E6BC91] text-lg px-4 after:content-['｜'] after:pl-[20px]" to="/featured">精選推薦</router-link></li>
           <li class="pr-4"><a class="text-[#E6BC91] text-lg " href="#"><i class="fa-solid fa-user px-3"></i>會員</a></li>
-          <li><router-link class="text-[#E6BC91] text-lg " to="/shopcar"><i class="fa-solid fa-bag-shopping px-3"></i>購物車</router-link></li>
+          <li><router-link class="text-[#E6BC91] text-lg " to="/shopcart"><i class="fa-solid fa-bag-shopping px-3"></i>購物車</router-link></li>
         </ul>
       </nav>
     </header>

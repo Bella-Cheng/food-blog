@@ -1,10 +1,12 @@
 <script setup>
+import { useCartStore } from '../stores/cartStore'
 import { products } from '../data/products'
 
 function getImageUrl(fileName) {
   return new URL(`../assets/products/${fileName}`, import.meta.url).href
 }
 
+const cartStore = useCartStore()
 
 </script>
 
@@ -31,7 +33,7 @@ function getImageUrl(fileName) {
             <p>{{ item.description}}</p>
             <p>${{ item.price}}元</p>
             <div class="card-actions justify-end">
-              <button class="btn bg-black text-white border-none hover:bg-amber-600">加入購物車</button>
+              <button @click="cartStore.addToCart(item)" class="btn bg-black text-white border-none hover:bg-amber-600">加入購物車</button>
             </div>
           </div>
         </div>

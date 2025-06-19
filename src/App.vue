@@ -12,11 +12,7 @@ import FooterBar from './components/FooterBar.vue';
 <template>
   <NavBar />
   <router-view /> 
-  <!-- <HomePage /> -->
-  <!-- <About /> -->
-  <!-- <Login /> -->
-  <!-- <Sign /> -->
-   <FooterBar />
+  <FooterBar />
 
 
 </template>
