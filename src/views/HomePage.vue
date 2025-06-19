@@ -1,4 +1,7 @@
 <script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
 
 </script>
 
@@ -6,7 +9,7 @@
   <body class="max-w-screen">
     <main>
       <!-- Section #1 -->
-      <section  class="bg-[url(./picture/bgc-bakery.jpg)] bg-cover p-46">
+      <section  class="bg-[url(./assets/picture/bgc-bakery.jpg)] bg-cover p-46">
         <div class="text-center max-w-6xl mx-auto">
           <h1 class="text-[#E6BC91] text-2xl font-bold py-8">熱愛美食</h1>
           <p class="text-8xl text-stone-50 pb-12">貝拉美食坊</p>
@@ -25,20 +28,22 @@
           <h2 class="text-stone-50 text-5xl py-20 ">精選推薦</h2>
           <div class="grid grid-cols-3 gap-24">
             <div>
-              <img class="w-full" src="./picture/img-buffet.jpg" alt="台北美食">
+              <img class="w-full" src="../assets/picture/img-buffet.jpg" alt="台北美食">
               <p class="text-3xl text-stone-50 py-4">台北美食</p>
             </div>
             <div>
-              <img class="w-full" src="./picture/img-dessert.jpg" alt="台北甜點">
+              <img class="w-full" src="../assets/picture/img-dessert.jpg" alt="台北甜點">
               <p class="text-3xl text-stone-50 py-4">台北甜點</p>
             </div>
             <div>
-              <img class="w-full" src="./picture/img-food.jpg" alt="平價美食">
+              <img class="w-full" src="../assets/picture/img-food.jpg" alt="平價美食">
               <p class="text-3xl text-stone-50 py-4">平價美食</p>
             </div>
           </div>
           <div class="text-lg text-[#E6BC91] py-20 pb-20">
-            <a class="after:content-['→'] after:pl-[20px]" href="#">查看文章</a>
+            <router-link to="/featured" class="after:content-['→'] after:pl-[20px]">
+              查看推薦
+            </router-link>
           </div>
         </div>
       </section>
