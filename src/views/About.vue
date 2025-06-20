@@ -40,7 +40,7 @@ const handleSubmit = async () => {
 <template>
   <main>
     <!-- Section #1 -->
-    <section class="bg-[url(./picture/bgc-cookie.jpg)] bg-cover p-46 bg-[20%_30%] font-bold">
+    <section class="bg-[url(./assets/picture/bgc-cookie.jpg)] bg-cover p-46 bg-[20%_30%] font-bold">
       <div class="text-center max-w-6xl mx-auto">
         <h1 class="text-stone-50 pb-12 text-8xl">關於我們</h1>
       </div>
