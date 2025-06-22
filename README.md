@@ -20,11 +20,11 @@
 - [daisyUI] — 基於 Tailwind CSS 的 UI 元件庫
 - [SweetAlert2] — 美觀的彈跳視窗提示工具
 
-## 🚀 部署方式
+## 部署方式
 
 本專案使用 [Vercel] 自動部署，只需連接 GitHub 倉庫，Vercel 會自動建置與部署。
 
-## 📦 安裝與啟動
+## 安裝與啟動
 
 ```bash
 # 安裝依賴
