@@ -64,7 +64,7 @@ const handleRegister = () => {
             <p class="text-left mb-6 text-xs text-gray-800">*需要英文跟數字的6碼組合</p>
            <input v-model="password" type="text" name="" id="" class="input input-bordered w-full">
           </div>
-          <button @click="handleRegister()" type="button" class="block w-full btn btn-neutral px-18 hover:bg-slate-500">
+          <button @click="handleRegister()" type="button" class="block btn bg-black text-white w-full hover:bg-gray-700">
             註冊
           </button>
           <router-link to="/login" class="cursor-pointer underline mt-6 hover:text-sky-600">已有帳號，點我進行登入</router-link>

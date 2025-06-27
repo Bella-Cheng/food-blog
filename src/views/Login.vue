@@ -84,26 +84,17 @@ const handleLogin = () => {
           <button
             @click="handleLogin"
             type="button"
-            class="btn btn-neutral px-18 hover:bg-slate-500 w-full"
+            class="btn bg-black text-white px-18 hover:bg-gray-700 w-full"
           >
             登入
           </button>
 
-          <div class="flex justify-between">
-            <button type="button" class="cursor-pointer my-6 px-14 hover:text-sky-600">
-              忘記帳號
-            </button>
-            <button type="button" class="cursor-pointer my-6 px-20 hover:text-sky-600">
-              忘記密碼
-            </button>
-          </div>
-
-          <hr class="border-gray-400" />
+          <hr class="border-gray-400 my-7" />
 
           <p class="mt-6">還沒有帳號？註冊一個吧</p>
           <router-link
             to="/signup"
-            class="cursor-pointer mt-2 btn btn-neutral w-full hover:bg-slate-500"
+            class="cursor-pointer mt-2 btn bg-black text-white w-full hover:bg-gray-700"
           >
             前往註冊
           </router-link>
